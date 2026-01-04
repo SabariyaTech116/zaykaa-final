@@ -1,72 +1,86 @@
-# zaykaa-final
+# Zaykaa - The Authentic Snack Marketplace
 
-✅ **zaykaa-final** — A concise project scaffold for [describe project purpose].
+Zaykaa is a hyperlocal food marketplace connecting traditional homemaker-chefs with urban consumers, built on the MERN stack (MongoDB, Express, React/Next.js, Node.js).
 
----
+## 🚀 Tech Stack
 
-## 🚀 Overview
+- **Frontend:** Next.js, Typescript, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT, OTP (Twilio/Firebase - *implied*)
 
-A short description of what this project does and who it's for. Replace this line with a clear one- or two-sentence summary of the project's goal and scope.
+## 🛠️ Prerequisites
 
-## ⚡ Features
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (Version 16 or higher recommended)
+- [MongoDB](https://www.mongodb.com/) (Local or Atlas)
+- [Git](https://git-scm.com/)
 
-- Feature 1 — short description
-- Feature 2 — short description
+## 📥 Installation
 
-## 💻 Prerequisites
-
-- Node.js >= 16 or Python 3.10+ (adjust as appropriate)
-- Any other tools or services required (Docker, database, etc.)
-
-## 🔧 Installation
-
-1. Clone the repo:
-
+Clone the repository:
 ```bash
-git clone https://github.com/<your-org>/zaykaa-final.git
+git clone https://github.com/umamahesh358/zaykaa-final.git
 cd zaykaa-final
 ```
 
-2. Install dependencies (example for Node.js):
+### 1. Backend Setup (Server)
 
+Navigate to the server directory and install dependencies:
 ```bash
+cd server
 npm install
 ```
 
-Adjust commands for your project's language or package manager.
+Create a `.env` file in the `server` directory with the following variables:
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+# Add other specific variables as needed (e.g., SMTP_HOST, EMAIL_USER for notifications)
+```
 
-## ▶️ Usage
-
-Start the application locally:
-
+Start the backend server:
 ```bash
 npm start
 ```
+The server will run on `http://localhost:5000`.
 
-Or run the applicable script for your project. Add example usage and sample commands here.
+### 2. Frontend Setup (Client)
 
-## ✅ Running tests
-
+Open a new terminal, navigate to the client directory, and install dependencies:
 ```bash
-npm test
+cd client
+npm install
 ```
 
-Describe test coverage and how to run specific test suites if relevant.
+Create a `.env.local` file in the `client` directory (if needed for API URLs):
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+```
 
-## 🛠️ Development
+Start the frontend development server:
+```bash
+npm run dev
+```
+The client will run on `http://localhost:3000`.
 
-- Branching strategy (e.g., feature branches, pull requests)
-- Coding style or linters
-- How to run dev servers or watch tasks
+## 🏃‍♂️ How to Run
+
+1.  **Start DB:** Ensure MongoDB is running.
+2.  **Start Server:** Terminal 1 -> `cd server` -> `npm start`
+3.  **Start Client:** Terminal 2 -> `cd client` -> `npm run dev`
+4.  **Access:** Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📂 Project Structure
+
+- `client/`: Next.js frontend application
+- `server/`: Node.js/Express backend API
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please open issues or submit pull requests. Add a short CONTRIBUTING.md if you need detailed guidelines.
-
-## 📄 License
-
-Specify the license (e.g., MIT). Replace this line with the correct license notice.
-
----
-
-If you'd like, I can customize this README with project-specific details (scripts, env vars, CI, badges). 💡
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
